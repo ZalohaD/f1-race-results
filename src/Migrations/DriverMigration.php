@@ -35,7 +35,7 @@ class DriverMigration
             )
         ');
         $stmt->execute();
-        echo "✅ Table `drivers` created successfully.<br>";
+        echo "Table `drivers` created successfully.";
     }
 
     public function up(int $count )
@@ -46,7 +46,7 @@ class DriverMigration
                 'surname' => $this->faker->lastName,
                 'age' => $this->faker->numberBetween(18, 60)
             ]);
-            echo "✅ Driver added: " . htmlspecialchars($driver['name']) . " " . htmlspecialchars($driver['surname']) . " (age " . $driver['age'] . ")<br>";
+            echo "Driver added";
         }
     }
 }
